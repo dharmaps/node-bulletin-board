@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: "shownext-925e"
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: "shownext-925e"
+    spec:
+      containers:
+        - name: "shownext-925e"
+          image: "shownextdockerhub.azurecr.io/shownext"
+          ports:
+          - containerPort: 8080
